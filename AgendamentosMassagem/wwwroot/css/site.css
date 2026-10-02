@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f5f0;
+    color: #594b3c;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.menu-principal {
+    background-color: #75634e;
+    padding: 12px 20px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 1200px;
+    min-height: calc(100vh - 130px);
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Página inicial */
+
+.home-container {
+    width: 100%;
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.price-section {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.price-subtitle {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 6vw, 60px);
+}
+
+.price-section h1 {
+    margin: 10px 0 30px;
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: clamp(42px, 8vw, 70px);
+    font-weight: normal;
+}
+
+/* Tabela de preços */
+
+.price-table-container,
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.price-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    border: 1px solid #9b8a76;
+}
+
+    .price-table th,
+    .price-table td {
+        padding: 18px 12px;
+        border-bottom: 1px solid #b4a595;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .price-table th {
+        font-size: 19px;
+    }
+
+    .price-table td {
+        font-size: 16px;
+    }
+
+/* Formulários */
+
+form {
+    width: 100%;
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+    min-height: 44px;
+}
+
+textarea.form-control {
+    min-height: 110px;
+}
+
+/* Botões */
+
+.btn {
+    margin: 3px;
+}
+
+/* Tabela de agendamentos */
+
+.agendamentos-table {
+    width: 100%;
+    min-width: 850px;
+}
+
+    .agendamentos-table th,
+    .agendamentos-table td {
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+
+/* Botões da página inicial */
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-agendamento,
+.btn-consultar {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-agendamento {
+    background-color: #75634e;
+    color: white;
+}
+
+.btn-consultar {
+    border: 1px solid #75634e;
+    color: #75634e;
+}
+
+/* Celular */
+
+@media (max-width: 576px) {
+    .menu-principal {
+        padding: 10px 12px;
+    }
+
+    .pagina {
+        padding: 20px 10px;
+    }
+
+    .home-container {
+        padding: 25px 0;
+    }
+
+    .price-table-container {
+        margin: 0;
+    }
+
+    .price-table {
+        min-width: 600px;
+    }
+
+        .price-table th {
+            font-size: 16px;
+        }
+
+        .price-table td {
+            font-size: 14px;
+            padding: 14px 8px;
+        }
+
+    .home-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn-agendamento,
+    .btn-consultar {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 16px;
+    }
+}
+
+/* ================================
+   PALETA LILÁS PADRONIZADA
+================================ */
+
+:root {
+    --lilas-principal: #9b8ac4;
+    --lilas-escuro: #76639f;
+    --lilas-claro: #eee8f7;
+    --lilas-muito-claro: #f8f5fc;
+    --lilas-borda: #d8cdea;
+    --texto-lilas: #5d5270;
+    --branco: #ffffff;
+}
+
+/* Fundo geral */
+body {
+    background-color: var(--lilas-muito-claro);
+    color: var(--texto-lilas);
+}
+
+/* Menu superior */
+.menu-principal,
+.navbar {
+    background-color: var(--lilas-principal) !important;
+}
+
+    .navbar-brand,
+    .navbar .nav-link {
+        color: var(--branco) !important;
+    }
+
+        .navbar .nav-link:hover {
+            color: var(--lilas-claro) !important;
+        }
+
+/* Página inicial */
+.home-container {
+    background-color: var(--lilas-muito-claro);
+}
+
+.price-section {
+    color: var(--texto-lilas);
+}
+
+    .price-subtitle,
+    .price-section h1 {
+        color: var(--lilas-escuro);
+    }
+
+/* Tabela de preços */
+.price-table {
+    border: 1px solid var(--lilas-borda);
+    background-color: var(--branco);
+}
+
+    .price-table th {
+        color: var(--lilas-escuro);
+        background-color: var(--lilas-claro);
+    }
+
+    .price-table td {
+        color: var(--texto-lilas);
+        border-bottom: 1px solid var(--lilas-borda);
+    }
+
+/* Texto abaixo da tabela */
+.booking-message {
+    color: var(--lilas-escuro);
+}
+
+/* Botão Fazer agendamento */
+.btn-agendamento,
+.btn-primary {
+    background-color: var(--lilas-principal) !important;
+    border-color: var(--lilas-principal) !important;
+    color: var(--branco) !important;
+}
+
+    .btn-agendamento:hover,
+    .btn-primary:hover {
+        background-color: var(--lilas-escuro) !important;
+        border-color: var(--lilas-escuro) !important;
+        color: var(--branco) !important;
+    }
+
+/* Botão Consultar agendamentos */
+.btn-consultar,
+.btn-secondary {
+    background-color: var(--lilas-claro) !important;
+    border: 1px solid var(--lilas-principal) !important;
+    color: var(--lilas-escuro) !important;
+}
+
+    .btn-consultar:hover,
+    .btn-secondary:hover {
+        background-color: var(--lilas-principal) !important;
+        color: var(--branco) !important;
+    }
+
+/* Botão Editar */
+.btn-warning {
+    background-color: #b7a6d5 !important;
+    border-color: #b7a6d5 !important;
+    color: #ffffff !important;
+}
+
+    .btn-warning:hover {
+        background-color: #9682bd !important;
+        border-color: #9682bd !important;
+        color: #ffffff !important;
+    }
+
+/* Botão Detalhes */
+.btn-info {
+    background-color: #a992c8 !important;
+    border-color: #a992c8 !important;
+    color: #ffffff !important;
+}
+
+    .btn-info:hover {
+        background-color: #856eaa !important;
+        border-color: #856eaa !important;
+        color: #ffffff !important;
+    }
+
+/* Botão Excluir */
+.btn-danger {
+    background-color: #967aab !important;
+    border-color: #967aab !important;
+    color: #ffffff !important;
+}
+
+    .btn-danger:hover {
+        background-color: #765580 !important;
+        border-color: #765580 !important;
+        color: #ffffff !important;
+    }
+
+/* Formulários */
+.form-control,
+.form-select {
+    border: 1px solid var(--lilas-borda);
+    color: var(--texto-lilas);
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: var(--lilas-principal);
+        box-shadow: 0 0 0 0.2rem rgba(155, 138, 196, 0.25);
+    }
+
+/* Tabela de agendamentos */
+.table {
+    background-color: var(--branco);
+    color: var(--texto-lilas);
+}
+
+    .table thead.table-dark {
+        background-color: var(--lilas-principal) !important;
+    }
+
+        .table thead.table-dark th {
+            background-color: var(--lilas-principal) !important;
+            color: var(--branco) !important;
+        }
+
+.table-bordered {
+    border-color: var(--lilas-borda);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--lilas-muito-claro);
+}
+
+/* Links */
+a {
+    color: var(--lilas-escuro);
+}
+
+    a:hover {
+        color: var(--lilas-principal);
+    }
+
+/* Mensagens */
+.alert-warning {
+    background-color: var(--lilas-claro);
+    border-color: var(--lilas-borda);
+    color: var(--lilas-escuro);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--lilas-claro);
+    color: var(--texto-lilas);
+}

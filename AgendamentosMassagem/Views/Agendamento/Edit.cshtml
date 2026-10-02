@@ -1,0 +1,137 @@
+﻿@model AgendamentosMassagem.Models.Agendamento
+
+@{
+    ViewData["Title"] = "Editar agendamento";
+}
+
+<h1>Editar agendamento</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-12 col-md-8 mx-auto">
+
+        <form asp-action="Edit" method="post">
+
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" asp-for="Id" />
+
+            <div asp-validation-summary="ModelOnly"
+                 class="text-danger">
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-md-6 mb-3">
+                    <label asp-for="Cliente"
+                           class="form-label">
+                    </label>
+
+                    <input asp-for="Cliente"
+                           class="form-control" />
+
+                    <span asp-validation-for="Cliente"
+                          class="text-danger">
+                    </span>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <label asp-for="TipoMassagem"
+                           class="form-label">
+                    </label>
+
+                    <input asp-for="TipoMassagem"
+                           class="form-control" />
+
+                    <span asp-validation-for="TipoMassagem"
+                          class="text-danger">
+                    </span>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <label asp-for="DataAgendamento"
+                           class="form-label">
+                    </label>
+
+                    <input asp-for="DataAgendamento"
+                           type="date"
+                           class="form-control" />
+
+                    <span asp-validation-for="DataAgendamento"
+                          class="text-danger">
+                    </span>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <label asp-for="HorarioAgendamento"
+                           class="form-label">
+                    </label>
+
+                    <input asp-for="HorarioAgendamento"
+                           type="time"
+                           class="form-control"
+                           step="60" />
+
+                    <span asp-validation-for="HorarioAgendamento"
+                          class="text-danger">
+                    </span>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <label asp-for="Preco"
+                           class="form-label">
+                    </label>
+
+                    <input asp-for="Preco"
+                           type="number"
+                           class="form-control"
+                           step="0.01"
+                           min="0" />
+
+                    <span asp-validation-for="Preco"
+                          class="text-danger">
+                    </span>
+                </div>
+
+                <div class="col-12 mb-3">
+                    <label asp-for="Endereco"
+                           class="form-label">
+                    </label>
+
+                    <input asp-for="Endereco"
+                           class="form-control"
+                           placeholder="Digite o endereço do atendimento" />
+
+                    <span asp-validation-for="Endereco"
+                          class="text-danger">
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="mt-3">
+
+                <button type="submit"
+                        class="btn btn-primary">
+                    Salvar alterações
+                </button>
+
+                <a asp-action="Index"
+                       class="btn btn-secondary">
+                    Voltar
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync(
+            "_ValidationScriptsPartial");
+    }
+}

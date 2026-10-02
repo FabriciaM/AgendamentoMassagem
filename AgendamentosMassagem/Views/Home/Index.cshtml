@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Tabela de Preços";
+}
+
+<div class="home-container">
+    <section class="price-section">
+
+        <p class="price-subtitle">
+            Tabela de Preços
+        </p>
+
+        <h1>
+            Procedimentos
+        </h1>
+
+        <div class="price-table-container">
+            <table class="price-table">
+
+                <thead>
+                    <tr>
+                        <th>Serviço</th>
+                        <th>Duração</th>
+                        <th>Valor (R$)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            Massagem Relaxante
+                        </td>
+
+                        <td>
+                            60 minutos
+                        </td>
+
+                        <td>
+                            R$ 130,00
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Massagem 2x1
+                        </td>
+
+                        <td>
+                            60 minutos
+
+                              
+                            <small>
+                                40 minutos de drenagem e
+                                20 minutos de relaxante
+                            </small>
+                        </td>
+
+                        <td>
+                            R$ 140,00
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            DrenoPOWER
+                        </td>
+
+                        <td>
+                            80 minutos
+
+                              
+                            <small>
+                                Drenagem corporal e facial
+                            </small>
+                        </td>
+
+                        <td>
+                            R$ 145,00
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Massagem 3x1
+                        </td>
+
+                        <td>
+                            60 minutos
+
+                              
+                            <small>
+                                40 minutos de drenagem,
+                                10 minutos de modeladora
+                                e 10 minutos de relaxante
+                            </small>
+                        </td>
+
+                        <td>
+                            R$ 160,00
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Miofascial (liberação)
+                        </td>
+
+                        <td>
+                            60 minutos
+
+                              
+                            <small>
+                                Liberação com uso de ventosas
+                                no corpo inteiro
+                            </small>
+                        </td>
+
+                        <td>
+                            R$ 150,00
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Drenolibera
+                        </td>
+
+                        <td>
+                            60 minutos
+
+                              
+                            <small>
+                                40 minutos de drenagem e
+                                20 minutos de liberação
+                            </small>
+                        </td>
+
+                        <td>
+                            R$ 160,00
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Drenagem Linfática
+                        </td>
+
+                        <td>
+                            60 minutos
+                        </td>
+
+                        <td>
+                            R$ 130,00
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+        <br />  
+        <p class="booking-message">
+            Necessário agendamento prévio.
+        </p>
+
+        <div class="home-buttons">
+
+            <a asp-controller="Agendamento"
+                   asp-action="Create"
+                   class="btn-agendamento">
+                Fazer agendamento
+            </a>
+
+            <a asp-controller="Agendamento"
+                   asp-action="Index"
+                   class="btn-consultar">
+                Consultar agendamentos
+            </a>
+
+        </div>
+
+    </section>
+</div>
